@@ -82,5 +82,7 @@ if (!Environment::is('production')) {
 Router::connect('/{:controller}/{:action}/{:args}');
 
 Router::connect('/', 'Books::index');
+Router::connect('/books/{:id}', 'Books::view');
+Router::connect('/authors/{:id}', 'Authors::view');
 
 ?>
