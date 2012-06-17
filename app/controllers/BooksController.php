@@ -18,7 +18,9 @@ class BooksController extends \lithium\action\Controller {
 	}
 
 	public function view() {
-		$book = Books::first($this->request->id);
+		$conditions = array('Books.id' => $this->request->id);
+		$with = array('Authors');
+		$book = Books::find('first', compact('conditions', 'with'));
 		if (!$book) {
 			$this->redirect('Books::index');
 		}
@@ -30,13 +32,19 @@ class BooksController extends \lithium\action\Controller {
 	}
 
 	public function edit($id = null) {
-		if (!$id) {
+		$conditions = array('Books.id' => $this->request->id);
+		$with = array('Authors');
+		$book = Books::find('first', compact('conditions', 'with'));
+		if (!$book) {
 			$this->redirect('Books::index');
 		}
 	}
 
 	public function delete($id = null) {
-		if (!$id) {
+		$conditions = array('Books.id' => $this->request->id);
+		$with = array('Authors');
+		$book = Books::find('first', compact('conditions', 'with'));
+		if (!$book) {
 			$this->redirect('Books::index');
 		}
 	}

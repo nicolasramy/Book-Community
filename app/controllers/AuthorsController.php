@@ -37,13 +37,10 @@ class AuthorsController extends \lithium\action\Controller {
 	}
 
 	public function edit($id = null) {
-		if (!$id) {
-			$this->redirect('Authors::index');
-		}
-	}
-
-	public function delete($id = null) {
-		if (!$id) {
+		$conditions = array('Authors.id' => $this->request->id);
+		$with = array('Books');
+		$author = Authors::find('first', compact('conditions', 'with'));
+		if (!$author) {
 			$this->redirect('Authors::index');
 		}
 	}
