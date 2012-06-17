@@ -7,17 +7,29 @@
  */
 
 namespace app\controllers;
-use \app\models\Author;
+use \app\models\Authors;
 
 class AuthorsController extends \lithium\action\Controller {
 
 	public function index() {
+		$authors = Authors::all();
+		return compact('authors');
 	}
 
-	public function view($id = null) {
-		if (!$id) {
+	public function login() {
+	}
+
+	public function logout() {
+	}
+
+	public function view() {
+		$conditions = array('Authors.id' => $this->request->id);
+		$with = array('Books');
+		$author = Authors::find('first', compact('conditions', 'with'));
+		if (!$author) {
 			$this->redirect('Authors::index');
 		}
+		return compact('author');
 	}
 
 	public function add() {
