@@ -7,19 +7,22 @@
  */
 
 namespace app\controllers;
-use \app\models\Book;
+use \app\models\Books;
+use \app\models\Authors;
 
 class BooksController extends \lithium\action\Controller {
 
 	public function index() {
-		$books = Book::all();
+		$books = Books::find('all', array('with' => 'Authors'));
 		return compact('books');
 	}
 
-	public function view($id = null) {
-		if (!$id) {
+	public function view() {
+		$book = Books::first($this->request->id);
+		if (!$book) {
 			$this->redirect('Books::index');
 		}
+		return compact('book');
 	}
 
 	public function add() {
