@@ -79,10 +79,10 @@ if (!Environment::is('production')) {
  * In almost all cases, custom routes should be added above this one, since route-matching works in
  * a top-down fashion.
  */
-Router::connect('/{:controller}/{:action}/{:args}');
+//Router::connect('/{:controller}/{:action}/{:args}');
 
 Router::connect('/', 'Books::index');
-Router::connect('/books/{:id}', 'Books::view');
-Router::connect('/authors/{:id}', 'Authors::view');
+Router::connect('/{:controller}/{:action}/{:id:[0-9]+}');
+Router::connect('/{:controller}/{:action}/{:args}');
 
 ?>
