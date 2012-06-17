@@ -14,6 +14,9 @@ class BooksController extends \lithium\action\Controller {
 	}
 
 	public function view($id = null) {
+		if (!$id) {
+			$this->redirect('Books::index');
+		}
 	}
 
 	public function add() {
@@ -21,11 +24,15 @@ class BooksController extends \lithium\action\Controller {
 	}
 
 	public function edit($id = null) {
-
+		if (!$id) {
+			$this->redirect('Books::index');
+		}
 	}
 
 	public function delete($id = null) {
-
+		if (!$id) {
+			$this->redirect('Books::index');
+		}
 	}
 }
 
