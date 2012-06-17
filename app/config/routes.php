@@ -27,13 +27,13 @@ use lithium\core\Environment;
  *
  * @see app\controllers\PagesController
  */
-Router::connect('/', 'Pages::view');
+//Router::connect('/', 'Pages::view');
 
 /**
  * Connect the rest of `PagesController`'s URLs. This will route URLs like `/pages/about` to
  * `PagesController`, rendering `/views/pages/about.html.php` as a static page.
  */
-Router::connect('/pages/{:args}', 'Pages::view');
+//Router::connect('/pages/{:args}', 'Pages::view');
 
 /**
  * Add the testing routes. These routes are only connected in non-production environments, and allow
@@ -80,5 +80,7 @@ if (!Environment::is('production')) {
  * a top-down fashion.
  */
 Router::connect('/{:controller}/{:action}/{:args}');
+
+Router::connect('/', 'Books::index');
 
 ?>
