@@ -19,6 +19,10 @@
 	<div id="container">
 		<header>
 			<h1>Book Community</h1>
+			<ul>
+				<li><?php echo $this->html->link('Books', array('Books::index')); ?></li>
+				<li><?php echo $this->html->link('Authors', array('Authors::index')); ?></li>
+			</ul>
 		</header>
 		<div id="content">
 			<?php echo $this->content(); ?>
