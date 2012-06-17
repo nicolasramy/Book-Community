@@ -11,7 +11,8 @@
 <head>
 	<?php echo $this->html->charset();?>
 	<title>Book Community &gt; <?php echo $this->title(); ?></title>
-	<?php echo $this->html->style(array('debug', 'lithium')); ?>
+	<?php echo $this->html->style(array('bootstrap.min', 'bootstrap-responsive.min', 'styles')); ?>
+	<?php //echo $this->scripts('jquery-1.7.2.min', 'bootstrap.min', 'jquery.ui.totop', 'bootstrap-alert'); ?>
 	<?php echo $this->scripts(); ?>
 	<?php echo $this->html->link('Icon', null, array('type' => 'icon')); ?>
 </head>
