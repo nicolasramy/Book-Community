@@ -8,12 +8,12 @@
 
 namespace app\controllers;
 use \app\models\Books;
-use \app\models\Authors;
 
 class BooksController extends \lithium\action\Controller {
 
 	public function index() {
-		$books = Books::find('all', array('with' => 'Authors'));
+		$with = array('Authors');
+		$books = Books::find('all', compact('with'));
 		return compact('books');
 	}
 
