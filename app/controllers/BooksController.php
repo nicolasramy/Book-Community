@@ -7,10 +7,13 @@
  */
 
 namespace app\controllers;
+use \app\models\Book;
 
 class BooksController extends \lithium\action\Controller {
 
 	public function index() {
+		$books = Book::all();
+		return compact('books');
 	}
 
 	public function view($id = null) {

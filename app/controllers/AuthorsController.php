@@ -7,6 +7,7 @@
  */
 
 namespace app\controllers;
+use \app\models\Author;
 
 class AuthorsController extends \lithium\action\Controller {
 
