@@ -8,7 +8,7 @@
 
 namespace app\controllers;
 
-class BooksController extends \lithium\action\Controller {
+class AuthorsController extends \lithium\action\Controller {
 
 	public function index() {
 	}
@@ -24,7 +24,7 @@ class BooksController extends \lithium\action\Controller {
 
 	}
 
-	public function delete($id = null) {
+	public function delete() {
 
 	}
 }
