@@ -62,7 +62,7 @@ require __DIR__ . '/bootstrap/action.php';
  * This file contains configuration for session (and/or cookie) storage, and user or web service
  * authentication.
  */
-// require __DIR__ . '/bootstrap/session.php';
+require __DIR__ . '/bootstrap/session.php';
 
 /**
  * This file contains your application's globalization rules, including inflections,
@@ -83,5 +83,7 @@ require __DIR__ . '/bootstrap/action.php';
 if (PHP_SAPI === 'cli') {
 	require __DIR__ . '/bootstrap/console.php';
 }
+
+require __DIR__ . '/bootstrap/auth.php';
 
 ?>

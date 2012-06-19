@@ -47,5 +47,4 @@ Session::config(array(
 // 		'fields' => array('username', 'password')
 // 	)
 // ));
-
 ?>

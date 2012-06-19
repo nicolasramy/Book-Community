@@ -5,3 +5,24 @@ body {
 .sidebar-nav {
 	padding: 9px 0;
 }
+
+.table .actions {
+	width: 15%;
+	text-align: center;
+}
+
+.table thead tr th {
+	vertical-align: middle;
+	text-align: center;
+}
+
+
+.table tbody tr td {vertical-align:middle;}
+
+.table tbody tr td.ids {
+	width: 35px;
+	max-width: 80px;
+	text-align: right;
+}
+
+.table tbody tr td.date {text-align:center;}

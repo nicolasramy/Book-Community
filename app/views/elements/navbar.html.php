@@ -26,6 +26,9 @@
 				<li>
 					<?php echo $this->html->link('Register', array('Authors::add')); ?>
 				</li>
+				<li>
+					<?php echo $this->html->link('Logout', array('Authors::logout')); ?>
+				</li>
 			</ul>
 			</div>
 		</div>

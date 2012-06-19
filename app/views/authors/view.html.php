@@ -1,4 +1,7 @@
-<h2>Authors</h2>
+<header>
+	<h2>Authors</h2>
+	<?php echo $this->html->link('Go back to Authors index', array('Authors::index')); ?>
+</header>
 
 <h3><?php echo $author->firstname; ?>&nbsp;<?php echo $author->lastname; ?></h3>
 <dl>
@@ -18,4 +21,4 @@
 	<p>No books available</p>
 <?php endif; ?>
 
-
+<footer></footer>
