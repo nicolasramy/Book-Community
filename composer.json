@@ -1,0 +1,6 @@
+{
+    "require": {
+        "composer/installers": "1.0.*@dev",
+        "unionofrad/lithium": "dev-dev"
+    }
+}
