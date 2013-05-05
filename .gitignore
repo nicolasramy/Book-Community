@@ -3,3 +3,6 @@ app/libraries/*
 app/resources/tmp/*
 .*.sw[op]
 app/config/bootstrap/connections.php
+/vendor
+/libraries
+/composer.lock
